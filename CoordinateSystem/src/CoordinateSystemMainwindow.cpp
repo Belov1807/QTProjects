@@ -3,13 +3,13 @@
 
 CoordinateSystemMainWindow::CoordinateSystemMainWindow(QWidget *parent)
     : QMainWindow(parent)
-    , ui(new Ui::CoordinateSystemMainWindow)
+    , m_ui(new Ui::CoordinateSystemMainWindow)
 {
-    ui->setupUi(this);
+    m_ui->setupUi(this);
 }
 
 CoordinateSystemMainWindow::~CoordinateSystemMainWindow()
 {
-    delete ui;
+    delete m_ui;
 }
 
