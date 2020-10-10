@@ -1,6 +1,6 @@
 QT       += core gui
 
-VERSION = 0.2.0
+VERSION = 0.3.0
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -17,11 +17,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     src/main.cpp \
     src/CoordinateSystemMainwindow.cpp \
-    src/CoordinateSystemSourceData.cpp
+    src/CoordinateSystemSourceData.cpp \
+    src/CoordinateSystemTableModel.cpp
 
 HEADERS += \
     src/CoordinateSystemMainwindow.h \
-    src/CoordinateSystemSourceData.h
+    src/CoordinateSystemSourceData.h \
+    src/CoordinateSystemTableModel.h
 
 FORMS += \
     src/CoordinateSystemMainwindow.ui

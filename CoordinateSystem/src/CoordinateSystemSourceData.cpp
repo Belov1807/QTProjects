@@ -1,26 +1,34 @@
 #include "CoordinateSystemSourceData.h"
 
-CoordinateSystemSourceData::CoordinateSystemSourceData(double _x, double _y) : m_x(_x), m_y(_y)
+CoordinateSystemSourceData::CoordinateSystemSourceData(double _x, double _y) :
+    m_x(_x),
+    m_y(_y)
 {
 
 }
 
-void CoordinateSystemSourceData::setX(double _x)
+CoordinateSystemSourceData::~CoordinateSystemSourceData()
+{
+
+}
+
+
+void CoordinateSystemSourceData::setX(const double _x)
 {
     m_x = _x;
 }
 
-void CoordinateSystemSourceData::setY(double _y)
+void CoordinateSystemSourceData::setY(const double _y)
 {
     m_y = _y;
 }
 
-double CoordinateSystemSourceData::getX()
+double CoordinateSystemSourceData::x() const
 {
     return m_x;
 }
 
-double CoordinateSystemSourceData::getY()
+double CoordinateSystemSourceData::y() const
 {
     return m_y;
 }

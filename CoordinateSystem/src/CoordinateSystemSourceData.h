@@ -9,32 +9,36 @@ class CoordinateSystemSourceData
 public:
     /*!
      * \brief Конструктор класса точки.
+     * \param _x - значение координаты x.
+     * \param _y - значение координаты y.
      */
-    CoordinateSystemSourceData(double _x, double _y);
+    CoordinateSystemSourceData(double _x = 0, double _y = 0);
     /*!
      * \brief Деструктор класса точки.
      */
     ~CoordinateSystemSourceData();
 
     /*!
-     * \brief Задает координату X.
+     * \brief Задает координату x.
+     * \param _x - значение координаты x.
      */
-    void setX(double _x);
+    void setX(const double _x);
     /*!
-     * \brief Задает координату Y.
+     * \brief Задает координату y.
+     * \param _y - значение координаты y.
      */
-    void setY(double _y);
+    void setY(const double _y);
 
     /*!
-     * \brief возвращает координату X.
-     * \return координата X.
+     * \brief возвращает координату x.
+     * \return координата x.
      */
-    double getX();
+    double x() const;
     /*!
-     * \brief возвращает координату Y.
-     * \return координата Y.
+     * \brief возвращает координату y.
+     * \return координата y.
      */
-    double getY();
+    double y() const;
 
 private:
     /*!
