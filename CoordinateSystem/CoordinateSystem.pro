@@ -10,10 +10,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     src/main.cpp \
-    src/CoordinateSystemMainwindow.cpp
+    src/CoordinateSystemMainwindow.cpp \
+    src/CoordinateSystemSourceData.cpp
 
 HEADERS += \
-    src/CoordinateSystemMainwindow.h
+    src/CoordinateSystemMainwindow.h \
+    src/CoordinateSystemSourceData.h
 
 FORMS += \
     src/CoordinateSystemMainwindow.ui
