@@ -29,7 +29,26 @@ public:
      */
     ~CoordinateSystemMainWindow();
 
+private slots:
+    /*!
+     * \brief Добавляет в таблицу точку, ниже выбранной точки.
+     */
+    void addPoint();
+    /*!
+     * \brief Удаляет выбранную точку из таблицы.
+     */
+    void removePoint();
+
 private:
+    /*!
+     * \brief Настравивает отображение.
+     */
+    void prepareUi();
+    /*!
+     * \brief Настравивает соеденения.
+     */
+    void prepareConnections();
+
     /*!
      * \brief Графический интерфейс.
      */

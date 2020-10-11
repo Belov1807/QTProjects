@@ -5,7 +5,6 @@
 CoordinateSystemTableModel::CoordinateSystemTableModel()
 {
     m_listPoints.clear();
-    m_listPoints.append(CoordinateSystemSourceData());
 }
 
 CoordinateSystemTableModel::~CoordinateSystemTableModel()
@@ -69,3 +68,25 @@ Qt::ItemFlags CoordinateSystemTableModel::flags(const QModelIndex &_index) const
     return Qt::ItemIsEnabled | Qt::ItemIsSelectable | Qt::ItemIsEditable;
 }
 
+bool CoordinateSystemTableModel::insertRows(int _position, int _rows, const QModelIndex &_parent)
+{
+    beginInsertRows(QModelIndex(), _position, _position + _rows -1);
+    m_listPoints.insert(_position +1, CoordinateSystemSourceData());
+    endInsertRows();
+
+    return true;
+}
+
+bool CoordinateSystemTableModel::removeRows(int _position, int _rows, const QModelIndex &_parent)
+{
+    beginRemoveRows(QModelIndex(), _position, _position + _rows -1);
+    m_listPoints.removeAt(_position);
+    endRemoveRows();
+
+    return true;
+}
+
+bool CoordinateSystemTableModel::modelIsEmpty()
+{
+    return m_listPoints.isEmpty();
+}

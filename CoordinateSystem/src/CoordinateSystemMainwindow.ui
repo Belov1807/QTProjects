@@ -6,17 +6,39 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>525</width>
-    <height>370</height>
+    <width>614</width>
+    <height>540</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>CoordinateSystemMainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QHBoxLayout" name="horizontalLayout">
+   <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QTableView" name="tvCoordinates"/>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QTableView" name="tvCoordinates"/>
+      </item>
+      <item row="1" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QPushButton" name="pbAddPoint">
+          <property name="text">
+           <string>Добавить точку</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pbRemovePoint">
+          <property name="text">
+           <string>Удалить точку</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
     </item>
    </layout>
   </widget>
@@ -25,7 +47,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>525</width>
+     <width>614</width>
      <height>22</height>
     </rect>
    </property>

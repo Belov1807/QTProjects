@@ -44,11 +44,11 @@ public:
      */  
     QVariant data(const QModelIndex &_index, int _role) const;
     /*!
-     * \brief Сохранаяет новое значение элемента.
+     * \brief Задает новое значение элемента.
      * \param _index - индекс элемента.
      * \param _value - новое значение элемента.
      * \param _role - роль элемента.
-     * \return
+     * \return true - новое значение задано.
      */
     bool setData(const QModelIndex &_index, const QVariant &_value, int _role = Qt::EditRole);
 
@@ -58,6 +58,29 @@ public:
      * \return Флаги элемента.
      */   
     Qt::ItemFlags flags(const QModelIndex &_index) const;
+
+    /*!
+     * \brief Добавляет точку в модель.
+     * \param _position - позиция точки.
+     * \param _rows - количество точек дя добавления.
+     * \param _parent - индекс модели.
+     * \return true - точка добавлена в модель.
+     */
+    bool insertRows(int _position, int _rows = 1, const QModelIndex &_parent = QModelIndex());
+    /*!
+     * \brief Удаляет точку из модели.
+     * \param _position - позиция точки.
+     * \param _rows - количество точек для удаления.
+     * \param _parent - индекс модели.
+     * \return true - точка удалена из модели.
+     */
+    bool removeRows(int _position, int _rows = 1, const QModelIndex &_parent = QModelIndex());
+
+    /*!
+     * \brief Возвращает состояние модели.
+     * \return true - модель пустая.
+     */
+    bool modelIsEmpty();
 
     /*!
      * \brief Псевдоним списка точек.
